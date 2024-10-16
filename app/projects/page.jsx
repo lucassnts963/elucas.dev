@@ -17,7 +17,7 @@ import { ItemProject } from "../_components/ItemProject";
 
 export default function ProjectsPage() {
   return (
-    <div className="text-gray-200 flex flex-col gap-4  mt-32">
+    <div className="text-gray-200 flex flex-col gap-4  mt-8">
       <h1 className={`${robotoSlab.className} text-8xl text-center mt-32`}>
         Projetos
       </h1>
