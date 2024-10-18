@@ -30,7 +30,7 @@ export default function ProjectsPage() {
         Projetos
       </motion.h1>
 
-      <div className="mt-16 flex flex-col">
+      <div className="mt-4 md:mt-16 flex flex-col">
         {/* Projetos com animação de aparecimento */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

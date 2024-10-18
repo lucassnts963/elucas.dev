@@ -48,7 +48,7 @@ export default function AboutPage() {
 
       {/* Texto sobre mim com animação */}
       <motion.div
-        className="mt-16 flex flex-col"
+        className="mt-4 md:mt-16 flex flex-col"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
