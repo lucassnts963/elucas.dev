@@ -66,7 +66,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 mb-8">
         <motion.div whileHover={{ scale: 1.05 }}>
           <ProjectCard
-            title="Bot Integrando Telegra e ChatGPT"
+            title="Bot Integrando Telegram e ChatGPT"
             description="Desenvolvi uma integração entre o Telegram e o ChatGPT, criando um bot que funciona diretamente do telegram, com o intuito de demonstrar que é possível utilizar ferramentas de inteligência artificial para aprimorar sistemas de atendimento."
             image="https://i.ytimg.com/vi/BJHx1ggyfo0/hqdefault.jpg"
             link="https://www.youtube.com/watch?v=BJHx1ggyfo0&t=2s"
