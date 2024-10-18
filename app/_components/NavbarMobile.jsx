@@ -1,20 +1,18 @@
 "use client";
 
-import { usePathname } from "next/navigation"; // Para pegar a rota atual no App Router
+import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation"; // Para pegar a rota atual e fazer a navegação
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { Roboto } from "next/font/google";
-import { useState } from "react";
 import { MenuIcon } from "lucide-react";
 
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 import { navItems } from "./Navbar";
@@ -27,10 +25,17 @@ const roboto = Roboto({
 
 export function NavbarMobile() {
   const pathname = usePathname();
+  const router = useRouter(); // Hook para navegar para outras páginas
   const [hovered, setHovered] = useState(null);
+  const [open, setOpen] = useState(false); // Estado para controlar a abertura da Sheet
+
+  const handleNavigation = (path) => {
+    setOpen(false); // Fecha a Sheet
+    router.push(path); // Faz a navegação
+  };
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger>
         <MenuIcon className="text-gray-200" size={32} />
       </SheetTrigger>
@@ -50,12 +55,12 @@ export function NavbarMobile() {
                 transition={{ duration: 0.3 }}
               >
                 <span className="mr-4">{item.id}</span>
-                <Link
-                  href={item.path}
-                  className={`${roboto.className} text-3xl`}
+                <button
+                  onClick={() => handleNavigation(item.path)} // Fecha a Sheet e navega para a página
+                  className={`${roboto.className} text-3xl text-left`}
                 >
                   {item.name}
-                </Link>
+                </button>
                 {isActive && (
                   <motion.div
                     className="absolute left-0 right-0 h-[6px] bg-red-500"

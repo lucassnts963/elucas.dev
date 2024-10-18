@@ -22,7 +22,7 @@ export default function Home() {
     <div className="text-gray-200 flex flex-col gap-4 container mx-auto px-4 lg:px-16">
       {/* Animação de entrada do texto */}
       <motion.h2
-        className={`${roboto.className} text-red-500 text-3xl md:text-4xl mt-32`}
+        className={`${roboto.className} text-red-500 text-3xl md:text-4xl mt-16 md:mt-32`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -40,7 +40,7 @@ export default function Home() {
       </motion.h1>
 
       <motion.p
-        className={`${roboto.className} text-4xl`}
+        className={`${roboto.className} text-lg md:text-4xl`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -53,7 +53,7 @@ export default function Home() {
       </motion.p>
 
       <motion.h2
-        className={`${robotoSlab.className} text-6xl mt-32`}
+        className={`${robotoSlab.className} text-6xl mt-16 md:mt-32`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
