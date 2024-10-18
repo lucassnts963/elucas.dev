@@ -4,6 +4,7 @@ import { Roboto, Roboto_Slab } from "next/font/google";
 import { ProjectCard } from "./_components/ProjectCard";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import { WhatsAppButton } from "./_components/WhatsAppButton";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -62,7 +63,7 @@ export default function Home() {
       </motion.h2>
 
       {/* Grid de Projetos com animação de hover */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 mb-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 mb-8">
         <motion.div whileHover={{ scale: 1.05 }}>
           <ProjectCard
             title="Bot Integrando Telegra e ChatGPT"
@@ -90,6 +91,7 @@ export default function Home() {
           />
         </motion.div>
       </div>
+      <WhatsAppButton />
 
       <Separator />
 
