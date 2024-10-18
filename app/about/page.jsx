@@ -66,16 +66,15 @@ export default function AboutPage() {
           trabalho como Técnico de Planejamento em projetos de montagem
           mecânica, o que me proporciona uma visão prática de grandes
           empreendimentos industriais. Minha experiência me levou a desenvolver
-          aplicativos, sistemas de gestão e ferramentas que não só agilizam o
-          trabalho, mas também incentivam o engajamento dos colaboradores.
-          Sempre me desafio a aprender algo novo, seja em desenvolvimento de
-          software, gerenciamento de projetos, ou análise de dados com
-          ferramentas como Power BI e Excel avançado. Acredito no poder da
-          tecnologia para transformar o mundo ao nosso redor, e minha missão é
-          contribuir para essa transformação, oferecendo soluções criativas e
-          funcionais. Fique à vontade para explorar mais sobre os projetos que
-          tenho realizado e entrar em contato. Vamos juntos construir algo
-          incrível!
+          aplicativos e ferramentas que não só agilizam o trabalho, mas também
+          incentivam o engajamento dos colaboradores. Sempre me desafio a
+          aprender algo novo, seja em desenvolvimento de software, gerenciamento
+          de projetos, ou análise de dados com ferramentas como Power BI e Excel
+          avançado. Acredito no poder da tecnologia para transformar o mundo ao
+          nosso redor, e minha missão é contribuir para essa transformação,
+          oferecendo soluções criativas e funcionais. Fique à vontade para
+          explorar mais sobre os projetos que tenho realizado e entrar em
+          contato. Vamos juntos construir algo incrível!
         </p>
       </motion.div>
 
