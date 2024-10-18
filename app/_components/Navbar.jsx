@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation"; // Para pegar a rota atual no App Router
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -13,16 +13,15 @@ const roboto = Roboto({
   display: "swap",
 });
 
+export const navItems = [
+  { id: "01", name: "Inicío", path: "/" },
+  { id: "02", name: "Projetos", path: "/projects" },
+  { id: "03", name: "Sobre", path: "/about" },
+];
+
 export function Navbar() {
   const pathname = usePathname();
   const [hovered, setHovered] = useState(null);
-
-  const navItems = [
-    { id: "01", name: "Inicío", path: "/" },
-    { id: "02", name: "Projetos", path: "/projects" },
-    { id: "03", name: "Social", path: "/social" },
-    { id: "04", name: "Sobre", path: "/about" },
-  ];
 
   return (
     <nav className="flex space-x-8 p-4 text-gray-200">
@@ -30,11 +29,14 @@ export function Navbar() {
         const isActive = pathname === item.path;
 
         return (
-          <div
+          <motion.div
             key={item.path}
             className="relative"
             onMouseEnter={() => setHovered(item.path)}
             onMouseLeave={() => setHovered(null)}
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "100%" }}
+            transition={{ duration: 0.3 }}
           >
             <span className="mr-1">{item.id}</span>
             <Link href={item.path} className={`${roboto.className} text-lg`}>
@@ -61,7 +63,7 @@ export function Navbar() {
                 style={{ bottom: "-8px" }} // A mesma distância para manter o alinhamento
               />
             )}
-          </div>
+          </motion.div>
         );
       })}
     </nav>

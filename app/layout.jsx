@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { Navbar } from "./_components/Navbar";
 import Link from "next/link";
+import { NavbarMobile } from "./_components/NavbarMobile";
 
 const roboto = Roboto({
   weight: "700",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${roboto.className} antialiased bg-gray-950 min-h-screen`}
+        className={`${roboto.className} antialiased bg-gray-950 min-h-screen px-8`}
       >
         <div className="max-w-[1200px] mx-auto pt-8">
           <div className="flex items-center justify-between">
@@ -36,8 +37,11 @@ export default function RootLayout({ children }) {
               </Link>
               <Image src="/user-checked.svg" width={25} height={25} />
             </div>
-            <div>
+            <div className="hidden md:flex">
               <Navbar />
+            </div>
+            <div className="md:hidden">
+              <NavbarMobile />
             </div>
           </div>
         </div>
