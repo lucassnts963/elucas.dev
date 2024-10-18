@@ -16,7 +16,7 @@ export function ItemProject({ title, description, image, link }) {
   return (
     <div className="mb-16">
       <h2
-        className={`${robotoSlab.className} text-4xl text-red-500 hover:text-red-700`}
+        className={`${robotoSlab.className} text-2xl md:text-4xl text-red-500 hover:text-red-700`}
       >
         <a
           href={link}
@@ -26,7 +26,9 @@ export function ItemProject({ title, description, image, link }) {
           {title}
         </a>
       </h2>
-      <h3 className={`${roboto.className} text-lg text-gray-400 mb-4`}>
+      <h3
+        className={`${roboto.className} text-sm md:text-lg text-gray-400 mb-4`}
+      >
         Desenvolvimento
       </h3>
       <div className="relative h-96 overflow-hidden rounded-md mb-4">
@@ -36,7 +38,9 @@ export function ItemProject({ title, description, image, link }) {
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
         />
       </div>
-      <p className={`${roboto.className} text-2xl text-justify mt-8`}>
+      <p
+        className={`${roboto.className} text-xl md:text-2xl text-justify mt-8`}
+      >
         {description}
       </p>
     </div>

@@ -22,7 +22,7 @@ export default function ProjectsPage() {
     <div className="text-gray-200 flex flex-col gap-4 mt-8">
       {/* Título da página com animação */}
       <motion.h1
-        className={`${robotoSlab.className} text-6xl text-center mt-32`}
+        className={`${robotoSlab.className} text-6xl text-center mt-16 md:mt-32`}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
